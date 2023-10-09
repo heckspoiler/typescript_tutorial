@@ -36,3 +36,28 @@ function divide(a: number, b: number): number {
 const multiply = function (a: number, b: number): number {
   return a * b;
 };
+
+const logger = (message: string): void => {
+  // void is used here because the function doesn't return anything since it only console.logs the value of "message". This means that there will be no return value for this function.
+  console.log(message);
+};
+
+const throwError = (message: string): never => {
+  // never means that we will never reach the end of the function. This means the function will never be executed completely and we'll exit the function early wihtout returning anything
+  throw new Error(message);
+};
+
+const throwError2 = (message: string): string => {
+  //if there's an error, the function will return a string. we only annotate a function with "never" if we are sure that the function will never be executed completely.
+  if (!message) {
+    throw new Error(message);
+  }
+  return message;
+};
+
+const throwError3 = (message: string): void => {
+  // this function will never return anything, so we can annotate it with "void" or "never"
+  if (!message) {
+    throw new Error(message);
+  }
+};
