@@ -61,3 +61,27 @@ const throwError3 = (message: string): void => {
     throw new Error(message);
   }
 };
+
+const todaysWeather = {
+  date: new Date(),
+  weather: 'sunny',
+};
+
+const logWeather = (forecast: { date: Date; weather: string }): void => {
+  console.log(forecast.date);
+  console.log(forecast.weather);
+};
+
+// ES2015 destructioring
+
+const logWeatherII = ({
+  date,
+  weather,
+}: {
+  date: Date;
+  weather: string;
+}): void => {
+  // we use destructuring here to get the properties of the object "forecast"
+  console.log(date);
+  console.log(weather);
+};
