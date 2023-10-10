@@ -75,3 +75,6 @@ const drink = {
 
 const pepsi: [string, boolean, number] = ['brown', true, 40];
 // this is a tuple. We use a tuple when we want to represent a record with some kind of property. The order of the elements in the tuple is very important. If we change the order of the elements, we get an error.
+
+// just a random thing
+const pepsi2: [boolean, string, number] = [true, 'brown', 40];
