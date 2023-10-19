@@ -60,21 +60,3 @@ importantDates.push([1, 2, 3, 4, 5, 6, 7, 8, 9]); // this is an array inside an 
 
 //When to use typed arrays? --> any time we need to represent a collection of records with some arbitrary sort order
 // arbitrary = willkürlich
-
-// Tuple --> array-like structure whre each element represents some property of a record
-
-// object representing a drink
-
-const drink = {
-  color: 'brown',
-  carbonated: true,
-  sugar: 40,
-};
-
-// let's represent the object above as an array (tuple)
-
-const pepsi: [string, boolean, number] = ['brown', true, 40];
-// this is a tuple. We use a tuple when we want to represent a record with some kind of property. The order of the elements in the tuple is very important. If we change the order of the elements, we get an error.
-
-// just a random thing
-const pepsi2: [boolean, string, number] = [true, 'brown', 40];
