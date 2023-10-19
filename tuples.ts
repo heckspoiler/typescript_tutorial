@@ -23,3 +23,14 @@ type Drink = [string, boolean, number]; // types are used to create a new type a
 const pepsi2: Drink = ['brown', true, 40];
 const sprite: Drink = ['clear', true, 40];
 const tea: Drink = ['brown', false, 0];
+
+// tuples aren't used on a regular basis in typescript.
+
+const carSpecs: [number, number] = [400, 3354]; // this is a tuple. What do those numbers mean? It's not very descriptive.
+
+const carStats = {
+  horsepower: 400,
+  weight: 3354,
+};
+
+// in an object it's immediately clear what the numbers mean. We can also use type aliases to make the code more readable.
