@@ -16,16 +16,23 @@ console.log(vehicle.color);
 // modifier 2: private: this method can only be called by other methods in this class
 // modifier 3: protected: this method can be called by other methods in this class, or by other methods in child classes
 
-// class Car extends Vehicle {
-//   private drive(): void {
-//     console.log('vroom vroom');
-//   }
-//   startDrivingProcess(): void {
-//     this.drive();
-//     this.honk();
-//   }
-// }
+class Car extends Vehicle {
+  constructor(public wheels: number, color: string) {
+    super(color);
+  }
+  private drive(): void {
+    console.log('vroom vroom');
+  }
+  startDrivingProcess(): void {
+    this.drive();
+    this.honk();
+  }
+}
 
-// const car = new Car();
-// console.log(car.color);
-// car.startDrivingProcess();
+const wroom = new Car(4, 'red');
+console.log(wroom.color);
+wroom.startDrivingProcess();
+
+// where to use classes
+
+// why do we care about classes? for the same reason we care about interfaces -> we're going to use it very heavily. First application next
